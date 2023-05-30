@@ -2,6 +2,21 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Quick Start
+
+1. open shell in folder you want project
+
+2. clone project into folder - `git clone https://github.com/tdiminick/barstool-score-client.git`
+
+3. install dependencies and start client - `cd barstool-score-client && npm install && npm start`
+
+4. should open automatically, but if not, open: `localhost:3000`
+
+## Notes
+
+**PORT:** Server uses `process.env.PORT` if set, or `3001` as default; if not using `3001`, update, `package.json > proxy`, to use the *PORT* you have set
+
+
 ## Available Scripts
 
 In the project directory, you can run:
