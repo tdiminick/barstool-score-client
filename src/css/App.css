@@ -1,0 +1,286 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  max-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  color: white;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.scoreboard-container {
+
+  > .scoreboard-header {
+    background-color: beige;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  > .scoreboard-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    overflow-x: auto;
+
+    > .scoreboard-card {
+      flex: 0 0 auto;
+      width: 20%;
+      min-width: 100px;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px;
+
+      > .scoreboard-date {
+        border-bottom: 1px solid black;
+        font-size: smaller;
+      }
+
+      > .scoreboard-scoreline {
+        display: flex;
+        border-bottom: 1px solid black;
+
+        > .scoreboard-team {
+          flex: 0 0 auto;
+          width: 60%;
+        }
+
+        > .scoreboard-score {
+          width: 40%;
+        }
+      }
+
+      > .scoreboard-gamestate {
+        background: lightgrey;
+        font-weight: bold;
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
+
+.game-stats {
+  > .scorebox-container {
+      padding: 10px 0 20px;
+      max-width: 800px;
+      margin: 0 auto;
+
+      > .flexbox {
+          display: flex;
+          max-width: 800px;
+
+          > .team-name {
+              flex: 0 0 auto;
+              width: 35%;
+              font-size: 2em;
+              border: 1px solid black;
+
+              > .subtitle {
+                  font-size: .5em;
+              }
+          }
+
+          > .game-state {
+              width: 30%;
+              font-weight: bold;
+              font-size: 1em;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+
+              > .league {
+              }
+
+              > .date {
+                font-size: smaller;
+              }
+          }
+
+          > .score {
+              flex: 0 0 auto;
+              width: 35%;
+              font-size: 2.5em;
+              font-weight: bold;
+              border: 1px solid black;
+          }
+      }
+  }
+}
+
+.boxscore-wrapper {
+  padding: 10px 0;
+
+  > table.boxscore {
+      border: 1px solid black;
+      margin: auto;
+      background-color: #282c34;
+      
+      > thead > tr > th, td {
+          background-color: white;
+          padding: 0 10px;
+
+          &.bold {
+              font-weight: bold;
+          }
+      }
+  }
+}
+
+.teamstats-container {
+  max-width: 600px;
+  min-width: 450px;
+  margin: 0 auto;
+
+  > .stats-header {
+    background-color: lightgrey;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  > .stat-line-container {
+    border: 1px solid black;
+
+    > .stat-line {
+        display: flex;
+
+        &.header {
+          font-weight: bold;
+        }
+        
+        > .stat-total {
+            width: 20%;
+        }
+
+        > .stat-name {
+            width: 60%;
+        }
+    }
+    
+    > .stat-line:nth-child(odd) {
+        background-color: beige;
+    }
+  }
+}
+
+.playerstats-container {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  > .stats-header {
+    background-color: lightgrey;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  > .playerstats-flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
+      border: 1px solid black;
+
+      > .scoreboard-header-section {
+          width: 100%;
+          background-color: grey;
+          font-weight: bold;
+      }
+
+      > .divider {
+        width: 1%;
+      }
+
+      > .team-container {
+          width: 49.5%;
+          min-width: 400px;
+
+          > .team-header-container {
+            background-color: beige;
+
+            > .team-header {
+                font-weight: bold;
+                background-color: #282c34;
+                color: white;
+                margin: 0 30%;
+            }
+          }
+
+          > .player-stat-line, .player-stat-line-header {
+              display: flex;
+
+              > .player-name {
+                  width: 40%;
+              }
+
+              > .player-stats {
+                  display: flex;
+                  width: 60%;
+
+                  > .stat {
+                      width: 25%;
+                  }
+              }
+          }
+
+          > .player-stat-line-header {
+              font-weight: bold;
+          }
+
+          > .player-stat-line:nth-child(odd) {
+              background-color: beige;
+          }
+      }
+  }
+}
+
+> @media screen and (max-width: 990px) {
+  .player-stats-flexbox {
+      flex-wrap: wrap;
+
+      > .team-container: {
+          flex-basis: 100%;
+      }
+  }
+}
+
+.MIA {
+  background-color: black !important;
+  color: white !important;
+}
+
+.OKC {
+  background-color: #00639b !important;
+  color: white !important;
+}
+
+.SEA {
+  background-color: rgb(12, 44, 86) !important;
+  color: white !important;
+}
+
+.LAA {
+  background-color: rgb(183, 18, 52) !important;
+  color: white !important;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
